@@ -1,6 +1,21 @@
 Statbook::Application.routes.draw do
   devise_for :users
+
+# Student Notes:
+#   Custom new route 'register' uses existing users/new url linkage
+#   Controller is registrations, action is new
+#   Note that registrations is the plural of the route name
+#   Format: verb 'url-route-name', to: 'devise/controller#action', as: :route_name
+#   Use rake routes to see change. Test online. Example: localhost:3000/register
+#   Update application.html.erb: replace new_user_registration_path with register_path
+  devise_scope :user do
+    get 'register', to: 'devise/registrations#new', as: :register
+    get 'login', to: 'devise/sessions#new', as: :login
+    get 'logout', to: 'devise/sessions#destroy', as: :logout
+  end
+
   resources :statuses
+  get 'feed', to: "statuses#index", as: :feed
   root to: "statuses#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
