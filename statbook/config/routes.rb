@@ -1,4 +1,5 @@
 Statbook::Application.routes.draw do
+  get "profiles/show"
   devise_for :users
 
 # Student Notes:
