@@ -6,7 +6,7 @@
   
 <% @statuses.each do |status| %>
   <div class="status">
-    <strong><%= status.user_id %> -   <%= status.user.full_name %> </strong>
+    <strong><%= status.user_id %> - <%= status.user.full_name %> - <%= status.user.profile_name %></strong>
     <p><%= status.content %></p>
 
     <div class="meta">

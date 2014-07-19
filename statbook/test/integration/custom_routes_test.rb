@@ -15,7 +15,7 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
 	test "that the /register route opens the signup page" do
 		get 'register'
 		assert_response :success
-	end
+	end   
   # test "the truth" do
   #   assert true
   # end
