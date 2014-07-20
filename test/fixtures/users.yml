@@ -1,0 +1,11 @@
+michele:
+  first_name: = "Tamara"
+  last_name: = "Buch"
+  profile_name: = "tammykins"
+  email: = "rose@gmail.com"
+
+jasmine:
+  first_name: = "Jasmine"
+  last_name: = "Woods"
+  profile_name: = "jazzminjoy"
+  email: = "jasmine@gmail.com"

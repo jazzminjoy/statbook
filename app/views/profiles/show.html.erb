@@ -1,0 +1,13 @@
+<div class="page-header">
+	<h1>Statuses for <%= @user.full_name %> - <%= @user.profile_name %>:</h1>
+</div>
+
+<% if @statuses %>
+	<% @statuses.each do |status| %>
+		<div class="form-horizontal well">
+			<%= status.content %>
+			<br />
+			<%= link_to time_ago_in_words(status.created_at), status_path(status) %> ago
+		</div>
+	<% end %>
+<% end %>
