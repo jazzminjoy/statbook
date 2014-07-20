@@ -1,11 +1,11 @@
-<div class="page-header">
-<h1>All Statuses</h1>
-</div>
+<h1>All Statuses:</h1>
+<h4>Hover over a status to see its edit and destroy links. (Sometimes a browser reload is necessary.)</h4>
+<br />
 
 <%= link_to "Post a New Status", new_status_path, class: "btn btn-success" %>
   
 <% @statuses.each do |status| %>
-  <div class="status">
+  <div class="status horizontal-form well">
     <strong><%= status.user_id %> - <%= status.user.full_name %> - <%= status.user.profile_name %></strong>
     <p><%= status.content %></p>
 
